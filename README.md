@@ -26,13 +26,22 @@ https://t.me/ms365e5
  <details>
 <summary><h3> 一些Docker环境安装的教程</h3></summary>
  
-   - Docker环境搭建：https://www.jianshu.com/p/996e08b7976d
-   
-   - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
- </details>
-<details>
-测试地址：[地址链接](http://hanhongyong.eu.org:1066/Admin/Login?ReturnUrl=%2F)
-测试密码：HanHongYong123456HHY
+ 使用 root 权限登录 Centos。确保 yum 包更新到最新。
+sudo yum update
+安装的yum工具集
+yum install -y yum-utils
+安装docker-ce的yum源:
+yum-config-manager --add-repo  https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+安装docker-ce
+yum install docker-ce
+查看docker服务状态:
+systemctl status docker.service
+开启自启动:
+systemctl enable docker.service
+开启服务:
+systemctl start docker.service
+![image](https://user-images.githubusercontent.com/63201846/229290379-b720213d-240f-4679-9e2c-93102f306808.png)
+
 <summary><h3> 部署步骤</h3></summary>
 
 1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
